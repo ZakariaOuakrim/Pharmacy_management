@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.Controller.StatisticsController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="860.0" stylesheets="@DashbordDesign.css">
+            <children>
+                <BarChart layoutX="14.0" layoutY="14.0" prefHeight="329.0" prefWidth="824.0" title="Sells">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                    <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shodow" />
+                    </styleClass>
+                </BarChart>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="16.0" layoutY="353.0" prefHeight="236.0" prefWidth="824.0" stylesheets="@DashbordDesign.css">
+            <styleClass>
+                <String fx:value="shodow" />
+                <String fx:value="white-bg" />
+            </styleClass>
+            <children>
+                <AnchorPane layoutX="29.0" layoutY="18.0" opacity="0.22" prefHeight="200.0" prefWidth="225.0" styleClass="card" stylesheets="@DashbordDesign.css">
+
+                </AnchorPane>
+                <AnchorPane layoutX="300.0" layoutY="18.0" opacity="0.45" prefHeight="200.0" prefWidth="225.0" styleClass="card" stylesheets="@DashbordDesign.css" />
+                <AnchorPane layoutX="573.0" layoutY="18.0" opacity="0.58" prefHeight="200.0" prefWidth="225.0" styleClass="card" stylesheets="@DashbordDesign.css" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

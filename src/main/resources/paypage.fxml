@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="529.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.Controller.PayeController">
+<!--    <AnchorPane prefHeight="598.0" prefWidth="996.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.Controller.PayController">-->
+
+    <children>
+        <AnchorPane layoutX="538.0" layoutY="49.0" opacity="0.78" prefHeight="407.0" prefWidth="314.0" stylesheets="@DashbordDesign.css">
+            <children>
+                <Label layoutX="7.0" layoutY="71.0" prefHeight="21.0" prefWidth="101.0" text="Medecine ID " />
+                <Button fx:id="button_add" layoutX="13.0" layoutY="210.0" mnemonicParsing="false" onAction="#nouveauxCommandeMedecine" prefHeight="31.0" prefWidth="89.0" text="ADD" />
+                <Label layoutX="18.0" layoutY="277.0" prefHeight="21.0" prefWidth="55.0" text="Total" />
+                <Label fx:id="text_total" layoutX="176.0" layoutY="277.0" prefHeight="21.0" prefWidth="89.0" text="0.0 MAD" />
+                <Button fx:id="button_pay" layoutX="176.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#paymentFinal" prefHeight="31.0" prefWidth="113.0" text="PAY" />
+            <Spinner fx:id="id_spinner" layoutX="119.0" layoutY="127.0" onMouseClicked="#pushQuantite" prefHeight="31.0" prefWidth="158.0" />
+            <Label layoutX="7.0" layoutY="132.0" prefHeight="21.0" prefWidth="67.0" text="Quantite" />
+            <Label layoutX="18.0" layoutY="310.0" prefHeight="22.0" prefWidth="125.0" text="Custummer Name" />
+            <TextField fx:id="custummer_name_text" layoutX="142.0" layoutY="306.0" prefHeight="31.0" prefWidth="158.0" />
+            <TextField fx:id="id_medecine_text" layoutX="119.0" layoutY="66.0" prefHeight="31.0" prefWidth="158.0" />
+            <Button layoutX="205.0" layoutY="210.0" mnemonicParsing="false" onAction="#deleteCommandeMedecine" prefHeight="31.0" prefWidth="81.0" text="DELETE" />
+            <Button layoutX="117.0" layoutY="210.0" mnemonicParsing="false" onAction="#updateCommandeMedecine" prefHeight="31.0" prefWidth="81.0" text="UPDATE" />
+            <Button fx:id="button_pay1" layoutX="42.0" layoutY="360.0" mnemonicParsing="false" onAction="#canceltransaction" onMouseClicked="#paymentFinal" prefHeight="31.0" prefWidth="107.0" text="CANCEL" />
+            </children>
+            <styleClass>
+                <String fx:value="top-form" />
+                <String fx:value="white-bg" />
+                <String fx:value="shodow" />
+            </styleClass>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+        </AnchorPane>
+        <TableView fx:id="table_id" layoutX="14.0" layoutY="28.0" onMouseClicked="#handlingMouse" prefHeight="496.0" prefWidth="476.0" stylesheets="@DashbordDesign.css">
+            <columns>
+                <TableColumn fx:id="id_medecine_table" prefWidth="128.0" text="ID MEDICINE" />
+                <TableColumn fx:id="product_name_table" prefWidth="140.0" text="Product name" />
+                <TableColumn fx:id="qte_table" prefWidth="94.0" text="Qte" />
+                <TableColumn fx:id="price_table" prefWidth="111.0" text="Price" />
+            </columns>
+            <styleClass>
+                <String fx:value="shodow" />
+                <String fx:value="white-bg" />
+            </styleClass>
+        </TableView>
+    </children>
+</AnchorPane>

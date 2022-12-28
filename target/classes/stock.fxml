@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.Controller.StockController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="-3.0" prefHeight="600.0" prefWidth="860.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-3.0">
+         <children>
+            <TextField layoutX="113.0" layoutY="95.0" stylesheets="@DashbordDesign.css">
+               <styleClass>
+                  <String fx:value="shodow" />
+                  <String fx:value="white-bg" />
+                  <String fx:value="textfield" />
+               </styleClass></TextField>
+            <TextField layoutX="377.0" layoutY="95.0" styleClass="textfield" stylesheets="@DashbordDesign.css" />
+            <Label layoutX="30.0" layoutY="98.0" text="Medicine ID " />
+            <Label layoutX="316.0" layoutY="96.0" text="Quantity" />
+            <ScrollPane layoutX="54.0" layoutY="206.0" prefHeight="372.0" prefWidth="785.0">
+               <content>
+                  <FlowPane fx:id="Flow_Pane" prefHeight="363.0" prefWidth="773.0" stylesheets="@DashbordDesign.css">
+                     <styleClass>
+                        <String fx:value="shodow" />
+                        <String fx:value="table-view" />
+                     </styleClass>
+                  </FlowPane>
+               </content>
+            </ScrollPane>
+            <Label layoutX="554.0" layoutY="97.0" text="Arrival date" />
+            <DatePicker layoutX="625.0" layoutY="93.0" styleClass="textfield" stylesheets="@DashbordDesign.css" />
+            <Button layoutX="376.0" layoutY="149.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="113.0" styleClass="clear-btn" stylesheets="@DashbordDesign.css" text="Add to Stock" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

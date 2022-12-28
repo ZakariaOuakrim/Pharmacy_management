@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_pane" prefHeight="600.0" prefWidth="860.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.Controller.MedicineControler">
+    <children>
+        <AnchorPane layoutX="5.0" layoutY="7.0" prefHeight="212.0" prefWidth="847.0" stylesheets="DashbordDesign.css">
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="shodow" />
+            </styleClass>
+            <children>
+                <Label layoutX="14.0" layoutY="26.0" text="Medicine ID:" />
+                <TextField fx:id="medicine_id" layoutX="109.0" layoutY="22.0" prefHeight="25.0" prefWidth="127.0" styleClass="textfield" stylesheets="DashbordDesign.css" />
+                <Label layoutX="323.0" layoutY="26.0" text="Company Name:" />
+                <TextField fx:id="company_name" layoutX="424.0" layoutY="22.0" prefHeight="25.0" prefWidth="186.0" styleClass="textfield" stylesheets="DashbordDesign.css" />
+                <Label layoutX="14.0" layoutY="62.0" text="Medicine Name:" />
+                <TextField fx:id="medicine_name" layoutX="109.0" layoutY="58.0" prefHeight="25.0" prefWidth="186.0" styleClass="textfield" stylesheets="DashbordDesign.css" />
+                <Label layoutX="14.0" layoutY="96.0" text="Type:" />
+                <AnchorPane layoutX="713.0" layoutY="15.0" prefHeight="128.0" prefWidth="101.0" stylesheets="DashbordDesign.css">
+                    <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shodow" />
+                    </styleClass>
+               <children>
+                  <ImageView fx:id="medicineImage" fitHeight="128.0" fitWidth="101.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+                </AnchorPane>
+                <Button layoutX="731.0" layoutY="153.0" mnemonicParsing="false" onAction="#importbtn" prefHeight="26.0" prefWidth="67.0" styleClass="add-btn" stylesheets="DashbordDesign.css" text="Import" />
+            <Button layoutX="354.0" layoutY="166.0" mnemonicParsing="false" onAction="#clearbtn" prefHeight="33.0" prefWidth="67.0" styleClass="clear-btn" stylesheets="DashbordDesign.css" text="Clear" />
+            <Button layoutX="527.0" layoutY="166.0" mnemonicParsing="false" onAction="#deletebtn" prefHeight="33.0" prefWidth="67.0" styleClass="delete-btn" stylesheets="DashbordDesign.css" text="Delete" />
+            <Button layoutX="271.0" layoutY="166.0" mnemonicParsing="false" onAction="#addbtn" prefHeight="33.0" prefWidth="67.0" styleClass="add-btn" stylesheets="DashbordDesign.css" text="Add" />
+            <Button layoutX="442.0" layoutY="166.0" mnemonicParsing="false" onAction="#updatebtn" prefHeight="33.0" prefWidth="67.0" styleClass="update-btn" stylesheets="DashbordDesign.css" text="Update" />
+            <Label layoutX="14.0" layoutY="133.0" text="Price" />
+            <TextField fx:id="price" layoutX="109.0" layoutY="129.0" prefHeight="25.0" prefWidth="101.0" promptText="0.0 DH" styleClass="textfield" stylesheets="DashbordDesign.css" />
+            <Label layoutX="324.0" layoutY="62.0" text="Description" />
+            <TextArea fx:id="desciption_txt" layoutX="424.0" layoutY="67.0" prefHeight="58.0" prefWidth="186.0" styleClass="textfield" stylesheets="DashbordDesign.css" />
+            <ChoiceBox fx:id="medicine_type" layoutX="110.0" layoutY="92.0" prefHeight="25.0" prefWidth="183.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="5.0" layoutY="239.0" prefHeight="352.0" prefWidth="847.0" stylesheets="DashbordDesign.css">
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="shodow" />
+            </styleClass>
+         <children>
+            <TextField fx:id="searchtxt" layoutX="29.0" layoutY="14.0" prefHeight="33.0" prefWidth="255.0" promptText="Search" styleClass="search" stylesheets="DashbordDesign.css">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="293.0" layoutY="18.0" onMouseClicked="#searchbtn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/magnifying-glass-solid.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="id_table_medicine" layoutX="29.0" layoutY="58.0" onMouseClicked="#MouseClikingTable" prefHeight="279.0" prefWidth="809.0">
+              <columns>
+                <TableColumn fx:id="table_medicine_id" prefWidth="118.33333969116211" text="Medicine ID" />
+                <TableColumn fx:id="table_medicine_name" prefWidth="165.77781677246094" text="Medicine Name" />
+                  <TableColumn fx:id="table_medicine_type" prefWidth="111.111083984375" text="Type" />
+                  <TableColumn fx:id="table_medicine_company" prefWidth="160.88885498046875" text="Company Name" />
+                  <TableColumn fx:id="table_medicine_descr" prefWidth="153.55548095703125" text="Description" />
+                  <TableColumn fx:id="table_medicine_price" prefWidth="96.66664632161462" text="Price" />
+              </columns>
+            </TableView>
+         </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

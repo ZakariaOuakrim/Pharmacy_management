@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.Controller.LoginController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane layoutY="3.0" prefHeight="495.0" prefWidth="280.0" style="-fx-background-color: #9fc34d;">
+                    <children>
+                        <ImageView fitHeight="161.0" fitWidth="280.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@assets/login.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="280.0" layoutY="3.0" prefHeight="495.0" prefWidth="420.0">
+                    <children>
+                        <Label layoutX="167.0" layoutY="76.0" text="Login">
+                            <font>
+                                <Font name="Viner Hand ITC" size="24.0" />
+                            </font>
+                        </Label>
+                        <Line endX="151.0" layoutX="177.0" layoutY="134.0" startX="-100.0" stroke="#9fc34d" strokeWidth="3.0" />
+                        <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="14.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@assets/profile.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="14.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@assets/lock.png" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="username" layoutX="67.0" layoutY="175.0" prefHeight="38.0" prefWidth="269.0" promptText="username" />
+                        <PasswordField fx:id="password" layoutX="67.0" layoutY="243.0" prefHeight="38.0" prefWidth="269.0" promptText="password" />
+                        <Button layoutX="116.0" layoutY="340.0" mnemonicParsing="false" onAction="#login" prefHeight="51.0" prefWidth="165.0" style="-fx-background-color: #9fc34d; -fx-background-radius: 100;" text="Login" textFill="#141413">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="label" layoutX="116.0" layoutY="416.0" prefHeight="30.0" prefWidth="242.0">
+                            <font>
+                                <Font size="20.0" />
+                            </font></Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

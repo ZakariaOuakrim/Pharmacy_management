@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="300.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.Controller.ClientController">
+<!--    <stylesheets>-->
+<!--        <URL value="@fxmlprincipale.css" />-->
+<!--    </stylesheets>-->
+    <children>
+        <VBox prefHeight="392.0" prefWidth="734.0">
+            <children>
+                <Pane layoutX="243.0" layoutY="93.0" prefHeight="392.0" prefWidth="791.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <TextField fx:id="nom" layoutX="128.0" layoutY="148.0" prefHeight="31.0" prefWidth="205.0" />
+                        <TextField fx:id="adress" layoutX="498.0" layoutY="91.0" prefHeight="31.0" prefWidth="197.0" />
+                        <DatePicker fx:id="date" layoutX="498.0" layoutY="148.0" prefHeight="31.0" prefWidth="197.0" />
+                        <Label layoutX="24.0" layoutY="153.0" text="Nom" />
+                        <Label layoutX="409.0" layoutY="96.0" text="Adress" />
+                        <Label layoutX="415.0" layoutY="153.0" text="Date" />
+                        <Label layoutX="57.0" layoutY="28.0" prefHeight="32.0" prefWidth="293.0" text="CLIENT Managment" textFill="#2edb02">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                        </Label>
+                        <Button layoutX="193.0" layoutY="266.0" mnemonicParsing="false" onAction="#nvclient" prefHeight="25.0" prefWidth="115.0" text="Enregistrer" />
+                        <Label layoutX="22.0" layoutY="96.0" text="Numero" />
+                        <TextField fx:id="id" layoutX="128.0" layoutY="91.0" prefHeight="31.0" prefWidth="205.0" />
+                        <Label fx:id="confirmation" layoutX="26.0" layoutY="355.0" prefHeight="17.0" prefWidth="243.0" textFill="#20bc1b">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Button layoutX="457.0" layoutY="266.0" mnemonicParsing="false" onAction="#btnsuppr" prefHeight="31.0" prefWidth="115.0" text="Supprimer" />
+                    </children>
+                </Pane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
