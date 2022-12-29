@@ -60,7 +60,7 @@ public class medicineManager {
         stat.executeUpdate();
         con.close();
     }
-    public static void update(String id,Medicine medicine) throws SQLException {
+    public static void update(Medicine medicine) throws SQLException {
         con = Dbutils.getConnection();
         String query = "UPDATE medicine set company_name = ?,medicine_name=?,type_product=?,price=?,Description=? where medicine_id =? ";
         PreparedStatement stat = con.prepareStatement(query);

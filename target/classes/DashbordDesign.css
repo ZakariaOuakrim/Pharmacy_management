@@ -13,14 +13,7 @@
     -fx-background-color:linear-gradient(to bottom right,#449d6b, #633364)
 }
 
-.nav-btn{
-     -fx-background-color;transparent;
-     -fx-cursor:hand;
-     -fx-font-size:14px;
-     -fx-font-family:"Arial";
-     -fx-text-fill:#fff;
-     -fx-alignment:CENTER-LEFT;
-}
+
 .shodow{
     -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,.5),6,0,0,0);
 
@@ -99,6 +92,12 @@
 }
 .update-btn:hover{
     -fx-background-color:#499377;
+}
+.gridlayout{
+    -fx-padding:10px;
+}
+.gridlayout:hover{
+    -fx-background-color:#7a447a;
 }
 
 .clear-btn{

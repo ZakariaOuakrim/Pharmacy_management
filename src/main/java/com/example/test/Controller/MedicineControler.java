@@ -124,7 +124,7 @@ public class MedicineControler  implements Initializable {
             alert.showAndWait();
             if(alert.getResult()==ButtonType.YES){
                 medicine = new Medicine(id_update,company_name.getText(),medicine_name.getText(),medicine_type.getValue(),Double.parseDouble(price.getText()),"",desciption_txt.getText());
-                medicineManager.update(id_update, medicine);
+                medicineManager.update( medicine);
                 clearbtn();
                 showList();
             }
@@ -164,11 +164,12 @@ public class MedicineControler  implements Initializable {
         medicine_type.setValue(medicine.getType());
         desciption_txt.setText(medicine.getDescription());
         price.setText(String.valueOf(medicine.getPrice()));
-
-
-        File file = new File(medicineManager.getImage(medicine_id.getText()));
-        Image image = new Image(file.toURI().toString(),101,128,false,true);
-        medicineImage.setImage(image);
+        String image_path=medicineManager.getImage(medicine_id.getText());
+        if(image_path!=null){
+            File file =  new File(image_path);
+            Image image = new Image(file.toURI().toString(),101,128,false,true);
+            medicineImage.setImage(image);
+        }
 
     }
 
